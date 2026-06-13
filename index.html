@@ -866,8 +866,8 @@ function checkFirebaseConfig() {
 // Always show app - Firebase credentials are embedded
 setTimeout(() => {
   document.getElementById('app').style.display = 'flex';
+  if (window._firebaseReady) initFirebase(); 
   window.addEventListener('firebaseReady', initFirebase);
-  if (window._firebaseReady) initFirebase();
 }, 800);
 </script>
 </body>
